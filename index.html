@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API</title>
+</head>
+<body>
+    <center>
+    <h1>Canvas API</h1>
+    <canvas height="500" width="500" style="border: 1px solid #000000;" id="myCanvas"></canvas>
+    <canvas height="500" width="500" style="border: 1px solid #000000;" id="myCanvas1"></canvas>
+    <canvas height="500" width="500" style="border: 1px solid #000000;" id="myCanvas2"></canvas>
+</center>
+</body>
+</html>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(500, 500);
+    ctx.stroke();
+    ctx.moveTo(500,0);
+    ctx.lineTo(0, 500);
+    ctx.stroke();
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello", 300, 300)
+
+
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(250, 250, 100, 0, 2 * Math.PI);
+    ctx.stroke();
+
+
+    var c = document.getElementById("myCanvas2");
+    var ctx = c.getContext("2d");
+    ctx.fillRect(100, 100, 200, 300);
+    ctx.stroke();
+</script>
